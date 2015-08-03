@@ -60,10 +60,7 @@
 		
 		
 	
-    </header>
-    
-<!-- INITIATES HEADESHIVE --><a id="startHeadhesive"></a>   
-    
+    </header>    
 
 
          
