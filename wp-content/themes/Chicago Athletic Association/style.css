@@ -100,5 +100,24 @@ sub {
 .clear {
 	clear:both;
 }
+.padding10px {
+	padding:10px;
+}
+.em-events-search {
+display:none;
+}
+.eventsThumb {
+	width:100%;
 
+
+	
+
+}
+.eventsThumb img{
+	width:100%;
+	height:inherit;
+	
+	
+
+}
 

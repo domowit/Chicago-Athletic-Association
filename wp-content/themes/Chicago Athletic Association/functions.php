@@ -354,3 +354,27 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
+
+ 
+add_filter('em_event_output_placeholder', 'filterEventThumbnail', 10, 3);
+ 
+/**
+* get event image as regular WordPress thumbnail
+* (or any registered WordPress image size)
+* @param string $result
+* @param EM_Event $EM_Event
+* @param string $placeholder
+* @return string
+*/
+function filterEventThumbnail($result, $EM_Event, $placeholder) {
+    if ($placeholder == '#_CUSTOMEVENTIMAGETHUMB') {
+        $imageID = get_post_thumbnail_id($EM_Event->post_id);
+        if ($imageID) {
+            $result = wp_get_attachment_image($imageID, 'thumbnail');
+        }
+    }
+ 
+    return $result;
+}
+
+
