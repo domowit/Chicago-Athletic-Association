@@ -1,11 +1,11 @@
-<footer role="contentinfo" class="row">
-	
-		Footer
-	
-	</footer>
+
 
 </div>
-
+<footer role="contentinfo" class="row">
+	
+		
+	
+	</footer>
 
 
 

@@ -354,6 +354,10 @@ function twentytwelve_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'twentytwelve_customize_preview_js' );
 
+function custom_theme_setup() {
+	add_theme_support( $feature, $arguments );
+}
+add_action( 'after_setup_theme', 'custom_theme_setup' );
 
  
 add_filter('em_event_output_placeholder', 'filterEventThumbnail', 10, 3);

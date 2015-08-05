@@ -15,16 +15,63 @@ Tags: 	SIMPLE FRAMEWORK
 
 
 /*	EXAMPLE STYLES */
+html {
+ height: 100%;
+}
+*,
+*:before,
+*:after {
+  
+}
+
 body {
+	position: relative;
+	min-height:100%;
 	font-family: sans-serif;
+	  color: #333;
+      background-color: rgb(251, 246, 231);
+      
+    
+   
 }
 
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 72px;
+    background-color: #f8f4e6;
+    border-bottom: 8px solid #9F2030;
+    z-index: 10;
 
-	background: #f2f2f2;
+}
+header .navLeft {
+ position:absolute;
+ top:30px;
+text-align:right;
+}
+.nav-icon {
+	width: 100%;
+    height: 50px;
+
+}
+.nav-icon img {
+    position: absolute;
+    width: 50px;
+    top: 8px;
+    left: 50%;
+    margin-left: -25px;
+}
+.hidden {
+	height:75px;
+	}
+.container {padding:0 15px;}	
+main {
+padding-bottom:300px !important;
 }
 
 article {
+
 	
 }
 .gutters {
@@ -34,15 +81,20 @@ article {
 
 footer {
 	padding: 10em 0;
-	text-align: center;
-	background: #f2f2f2;
+	background-color: rgb(150, 146, 137);
+	
+	width: 100%;
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /*	Typography VIA http://www.gridlover.net/app/  (MAJOR SIXTH) */
 body {
   font-size: 1em;
   line-height: 1.625em;
-  margin: 0 auto;
+    
 }
 h1 {
   font-size: 4.625em;
@@ -72,7 +124,7 @@ h4 {
   margin-bottom: 1.625em;
   font-weight:bold
 }
-p, ul, ol, pre, table, blockquote {
+p {
   margin-top: 1.625em;
   margin-bottom: 1.625em;
 }
@@ -120,4 +172,17 @@ display:none;
 	
 
 }
+/*EVENTS PAGE */
+.eventImage {
+	margin-right:2%;
+}
+.eventImage img{
+	width:100%;
+	height:inherit;
+
+}
+
+table.em-calendar { width:100%; 
+height:600px;}
+table.fullcalendar td{ width:14.28%; }
 

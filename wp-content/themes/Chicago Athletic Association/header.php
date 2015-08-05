@@ -46,21 +46,23 @@
 
 <body <?php body_class(); ?>>
 
-
- 
-    
-    
-    
-<div class="container row">
-	<header class="banner row ">
+<header class="banner row">
         	
+		<div class="container row">
+		<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
 		
-		
-			<?php wp_nav_menu( $args ); ?>
+			<div class="navLeft"><?php wp_nav_menu( '$args' ); ?></div>
+		</div>
 		
 		
 	
-    </header>    
+</header>    
+ 
+  <div class="hidden"></div>  
+    
+    
+<div class="container row body">
+	
 
 
          
