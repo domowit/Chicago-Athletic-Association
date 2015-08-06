@@ -51,7 +51,7 @@
 		<div class="container row">
 		<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
 		
-			<div class="navLeft"><?php wp_nav_menu( '$args' ); ?></div>
+			<div class="navLeft menu"><?php wp_nav_menu( '$args' ); ?></div>
 		</div>
 		
 		
@@ -61,7 +61,7 @@
   <div class="hidden"></div>  
     
     
-<div class="container row body">
+
 	
 
 

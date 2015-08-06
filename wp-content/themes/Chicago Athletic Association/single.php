@@ -1,16 +1,29 @@
 <?php get_header(); ?>
 <?php // GET QUERIES TO PULL IN OTHER PAGES ?>
-
-<main class="row">
+<div class="container row body">
+<main class="row span_9" style="padding-top:50px; margin: 0 auto;">
 		<article>
 				<?php $the_query = new WP_Query( $args ); ?>
 					<?php while ( have_posts() ) : the_post(); ?>				
 						<?php the_content(); ?>
 					<?php endwhile; // end of the loop. ?>
 				<?php wp_reset_postdata(); ?>
-				<?php next_post_link( '%link', 'Next post in category', TRUE ); ?>
-				<?php previous_post_link( '%link', 'Previous post in category', TRUE ) ?>
+				
 		</article>
+
+<?php
+// The Query ADDING SCHEDULE HERE
+$the_query = new WP_Query( 'pagename=Upcoming');
+// The Loop
+while ( $the_query->have_posts() ) : $the_query->the_post();
+	the_content();
+	endwhile;
+// Reset Post Data
+wp_reset_postdata();
+?>
+
+
+
 		
 </main>
 <?php get_footer(); ?>

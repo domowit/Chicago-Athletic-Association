@@ -39,7 +39,7 @@
 
 /* 	DEFAULT ROW STYLES 
 	Set bottom padding according to preference */
-.row { padding-bottom: 0em;
+.row { padding-top: 0em;
 }
 			
 								  
@@ -53,7 +53,7 @@
 @media ( min-width : 768px ) {
 	
 	.gutters .col {
-		margin-left: 2%;
+		margin-left: 5px;
 	}
 	
 	.gutters .col:first-child { 
