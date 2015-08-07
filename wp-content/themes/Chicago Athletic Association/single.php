@@ -10,11 +10,19 @@
 				<?php wp_reset_postdata(); ?>
 				
 		</article>
+<<<<<<< Updated upstream
       
         <hr/>
         
 <h3 align="center">Other Upcoming events</h3>
 
+=======
+        <br><br>
+        <hr/>
+        
+<h3 align="center">Other Upcoming events</h3>
+<br>
+>>>>>>> Stashed changes
 <?php
 // The Query ADDING SCHEDULE HERE
 $the_query = new WP_Query( 'pagename=Upcoming');

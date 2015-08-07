@@ -207,6 +207,7 @@ input[type=checkbox]:checked ~ #menu {
 	width:100%;
 	height:inherit;
 }
+<<<<<<< Updated upstream
 table.em-calendar {
 	width:100%;
 	height:600px;
@@ -234,10 +235,30 @@ padding:10px;
 .em-booking-form-details {
 	padding: 0px !important;
 	width:100% !important;
+=======
+table.em-calendar { width:100%; 
+height:600px;}
+table.fullcalendar td{ width:14.28%; }
+
+/*PLACEHOLDER */
+.placeholder {
+ width:100%;
+ background-color:#ccc;
+ height:480px;
+ text-align:center;
+ vertical-align:middle;
+ padding-top:50px;
+}
+/*FORM */
+.em-booking-form-details {
+	padding: 0px !important; 
+	width:100% !important; 
+>>>>>>> Stashed changes
 	float:inherit !important;
 }
 .em-booking-form-details input.input, .em-booking-form-details textarea {
 	width:100% !important;
+<<<<<<< Updated upstream
 }
 
 
@@ -321,3 +342,6 @@ header nav ul li a {
 	height:0px;
 }
 }
+=======
+}
+>>>>>>> Stashed changes
