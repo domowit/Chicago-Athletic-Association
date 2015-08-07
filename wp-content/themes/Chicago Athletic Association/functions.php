@@ -99,7 +99,14 @@ function twentytwelve_page_menu_args( $args ) {
 		$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'twentytwelve_page_menu_args' );
+add_filter( );
+
+function my_wp_nav_menu_args( $args = '' ) {
+	$args['container'] = false;
+	return $args;
+}
+add_filter( 'wp_nav_menu_args', 'my_wp_nav_menu_args' );
+
 
 /**
  * Registers our main widget area and the front page widget areas.

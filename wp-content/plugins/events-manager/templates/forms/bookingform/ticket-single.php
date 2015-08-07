@@ -27,7 +27,7 @@ foreach( $collumns as $type => $name ): ?>
 		case 'spaces':
 			if( $EM_Ticket->get_available_spaces() > 1 && ( empty($EM_Ticket->ticket_max) || $EM_Ticket->ticket_max > 1 ) ): //more than one space available ?>				
 				<p class="em-tickets-spaces">
-					<label for='em_tickets'><?php echo $name; ?></label>
+					<label for='em_tickets'></label>
 					<?php 
 						$default = !empty($_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']) ? $_REQUEST['em_tickets'][$EM_Ticket->ticket_id]['spaces']:0;
 						$spaces_options = $EM_Ticket->get_spaces_options(false,$default);

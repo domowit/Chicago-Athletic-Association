@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php // GET QUERIES TO PULL IN OTHER PAGES ?>
 <div class="container row body">
-<main class="row span_9" style="padding-top:50px; margin: 0 auto;">
+<main class="row span_10" style="padding-top:50px; margin: 0 auto;">
 		<article>
 				<?php $the_query = new WP_Query( $args ); ?>
 					<?php while ( have_posts() ) : the_post(); ?>				
@@ -10,6 +10,10 @@
 				<?php wp_reset_postdata(); ?>
 				
 		</article>
+      
+        <hr/>
+        
+<h3 align="center">Other Upcoming events</h3>
 
 <?php
 // The Query ADDING SCHEDULE HERE

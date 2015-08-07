@@ -41,6 +41,9 @@
 <!-- STYLE-->
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 <!-- END STYLE-->
+<!-- FONTS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!-- END FONTS-->
 <?php wp_head(); ?>
 </head>
 
@@ -49,9 +52,32 @@
 <header class="banner row">
         	
 		<div class="container row">
-		<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
-		
-			<div class="navLeft menu"><?php wp_nav_menu( '$args' ); ?></div>
+			<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
+			
+			<nav>
+			<label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+			<input type="checkbox" id="show-menu" role="button">
+			 
+				
+					<?php
+
+					$defaults = array(
+						'menu_id'         => 'menu',
+						'walker'          => ''
+					);
+					wp_nav_menu( $defaults );
+
+				?>
+<div class="clear"></div>
+<ul id="menu">
+<div class="socialDropdown">
+<li>
+[Social Media]
+</li>
+</div>
+</ul>
+				
+			</nav>
 		</div>
 		
 		
