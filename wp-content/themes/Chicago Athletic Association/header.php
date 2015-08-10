@@ -34,8 +34,9 @@
 <![endif]-->
 
 <!-- JS HERE-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 <script src="<?php bloginfo('stylesheet_directory') ?>/js/respond.min.js"></script>
+<script type="text/javascript" src="http://stickyjs.com/jquery.sticky.js"></script>
 <!--END JS-->
 
 <!-- STYLE-->
@@ -52,6 +53,11 @@
 <header class="banner row">
         	
 		<div class="container row">
+		<div style="padding:20px;">
+		<a href="http://melanie-f.com/en/">Example Site </a> | 
+		<a href="http://jsfiddle.net/u5c51ubk/3/">jsfiddle</a> | 
+		<a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/">PARALAX</a>
+		</div>
 			<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
 			
 			<nav>
