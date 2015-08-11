@@ -34,30 +34,37 @@
 <![endif]-->
 
 <!-- JS HERE-->
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="<?php bloginfo('stylesheet_directory') ?>/js/respond.min.js"></script>
 <script type="text/javascript" src="http://stickyjs.com/jquery.sticky.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/js/divPeek.js"></script>
+<script src="<?php bloginfo('stylesheet_directory') ?>/js/modernizr.js"></script> <!-- Modernizr -->
 <!--END JS-->
 
 <!-- STYLE-->
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 <!-- END STYLE-->
 <!-- FONTS -->
+<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <!-- END FONTS-->
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>  data-animation="catch">
 
-<header class="banner row">
+<wrapper>
+
+
+<header>
         	
 		<div class="container row">
-		<div style="padding:20px;">
-		<a href="http://melanie-f.com/en/">Example Site </a> | 
-		<a href="http://jsfiddle.net/u5c51ubk/3/">jsfiddle</a> | 
-		<a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/">PARALAX</a>
-		</div>
+								<div style="padding:20px;">
+								<a href="http://melanie-f.com/en/">Example Site </a> | 
+								<a href="http://jsfiddle.net/u5c51ubk/3/">jsfiddle</a> | 
+								<a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/">PARALAX</a>
+								</div>
 			<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
 			
 			<nav>
@@ -74,14 +81,14 @@
 					wp_nav_menu( $defaults );
 
 				?>
-<div class="clear"></div>
-<ul id="menu">
-<div class="socialDropdown">
-<li>
-[Social Media]
-</li>
-</div>
-</ul>
+				<div class="clear"></div>
+				<ul id="menu">
+					<div class="socialDropdown">
+						<li>
+							[Social Media]
+						</li>
+					</div>
+				</ul>
 				
 			</nav>
 		</div>
@@ -89,7 +96,7 @@
 		
 	
 </header>    
- 
+ </wrapper>
   <div class="hidden"></div>  
     
     
