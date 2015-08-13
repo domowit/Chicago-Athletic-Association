@@ -3,6 +3,10 @@
 Primary style
 
 -------------------------------- */
+.parallax {
+position:relative;
+top:-15vh;
+}
 
 @media only screen and (min-width: 768px) {
   body::before {
@@ -11,32 +15,99 @@ Primary style
     display: none;
   }
 }
+/* I DONT KNOW 
+.logoJazz {
+	float:right;
+    position:relative;
+    left:-50%;
+
+}
+.logoJazz .container {
+	 position:relative;
+    left:50%;
+}
+
+.logoJazz .container .left {
+ 
+	display: inline;
+	margin: 0 ;
+	
+
+	
+}
+.logoJazz .container .middle {
+ 
+	display: inline;
+	margin: 0 ;
+	
+
+	
+}
+.logoJazz .container .right {
+ 
+	display: inline;
+	margin: 0 ;
+	
+
+	
+}*/
 .scrollfx5 {
-	margin: 120px auto 40px auto;
+	
+	padding-top:1%;
+
+	margin: 20px auto 40px auto;
+	padding-top:1%;
+	
+
 	
 }
 
+.nav-icon {
+	width: 60px;
+	height: 30px;
+	display:block;
+	margin:20px auto 0 auto;
+
+	padding:10px;
+	
+}
+.nav-icon img {
+	
+	width: 50px;
+
+	margin:0 auto;
+	
+
+}
 .scrollfx5 #post1, .scrollfx5 #post2, .scrollfx5 #post3, .scrollfx5 #post4, .scrollfx5 #post5, .scrollfx5 #post6, .scrollfx5 #post7, .scrollfx5 #post8 {
-	width:60%;
-	height:1px;
-	background-color:#575757;
+	width:20%;
+	height:2px;
+	background-color:#9F2030;
 	margin: 0 auto;
-	
-	
+	-webkit-transition-delay: 6s; /* Safari */
+    transition-delay: 6s;
 	-webkit-transition: 2s ease; 
 	-moz-transition: 2s ease; 
 	-o-transition: 2s ease;
-	-webkit-transform: scale(1, 1);  
-	-moz-transform: scale(1, 1);    
-	-ms-transform: scale(1, 1);      
-	transform: scale(1, 1);  
+
+	-webkit-transform: scaleX(1);  
+	-moz-transform: scaleX(1);    
+	-ms-transform: scaleX(1);      
+	transform: scaleX(1);
+
+	
+	
+    /* ADD THIS transform-origin:top right; */
+	 
 }
 .scrollfx5 #post1.outViewPort, .scrollfx5 #post2.outViewPort, .scrollfx5 #post3.outViewPort, .scrollfx5 #post4.outViewPort, .scrollfx5 #post5.outViewPort, .scrollfx5 #post6.outViewPort, .scrollfx5 #post7.outViewPort, .scrollfx5 #post8.outViewPort {
-	margin: 0 auto;
-	-webkit-transform: scale(0, 1);  
-	-moz-transform: scale(0, 1);    
-	-ms-transform: scale(0, 1);      
-	transform: scale(0, 1); 
+	
+
+	-webkit-transform: scaleX(0);  
+	-moz-transform: scaleX(0);    
+	-ms-transform: scaleX(0);      
+	transform: scaleX(0);
+
 }
 
 /* -------------------------------- 
@@ -52,7 +123,7 @@ Main Components
 }
 
 .cd-section {
-  height: 60vh;
+  height: 50vh;
 
 
 
@@ -69,6 +140,7 @@ Main Components
 .cd-section:nth-of-type(8) > div {
 background-color:#FBF6E7;
 transition: background-color .5s ease;
+padding-bottom:2%;
 }
 .cd-section:first-of-type:hover > div,
 .cd-section:nth-of-type(2):hover > div,
@@ -79,7 +151,7 @@ transition: background-color .5s ease;
 .cd-section:nth-of-type(7):hover > div,
 .cd-section:nth-of-type(8):hover > div {
 /*background-color:#FBF6E7;*/
-background-color: #fff;
+background-color: #eee9db ;
 }
 .cd-section:first-of-type > div::before {
   /* alert -> all scrolling effects are not visible on small devices */

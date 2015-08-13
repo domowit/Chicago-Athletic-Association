@@ -17,6 +17,9 @@ function exclude_protected_action($query) {
 	}
 }
 
+
+
+
 // Action to queue the filter at the right time
 add_action('pre_get_posts', 'exclude_protected_action');
 
@@ -389,3 +392,42 @@ function filterEventThumbnail($result, $EM_Event, $placeholder) {
 }
 
 
+/*
+Plugin Name: Events Manager custom thumbnails
+Plugin URI: https://gist.github.com/webaware/8793362
+Description: example of using custom thumbnails for events
+Version: 1
+Author: WebAware
+Author URI: http://www.webaware.com.au/
+@ref: http://snippets.webaware.com.au/snippets/stop-events-manager-from-cropping-thumbnails/
+*/
+add_filter('em_event_output_placeholder', 'events_manager_custom_thumbnails', 10, 3);
+/**
+* get event image as regular WordPress thumbnail
+* (or any registered WordPress image size)
+* @param string $result
+* @param EM_Event $EM_Event
+* @param string $placeholder
+* @return string
+*/
+function events_manager_custom_thumbnails($result, $EM_Event, $placeholder) {
+    // check a custom image placeholder, pick up size
+    switch ($placeholder) {
+        case '#_CUSTOMEVENTIMAGETHUMB':
+            $size = 'thumbnail';
+            break;
+        case '#_CUSTOMEVENTIMAGEMEDIUM':
+            $size = 'single page';
+            break;
+        default:
+            $size = false;
+    }
+    // if size was set, get image of that size
+    if ($size) {
+        $imageID = get_post_thumbnail_id($EM_Event->post_id);
+        if ($imageID) {
+            $result = wp_get_attachment_image($imageID, $size);
+        }
+    }
+    return $result;
+}

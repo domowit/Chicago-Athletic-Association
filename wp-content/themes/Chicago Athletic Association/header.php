@@ -54,50 +54,43 @@
 
 <body <?php body_class(); ?>  data-animation="catch">
 
-<wrapper>
 
+<main>
 
-<header>
+<!--<header class="span_10 center">
         	
-		<div class="container row">
-								<div style="padding:20px;">
-								<a href="http://melanie-f.com/en/">Example Site </a> | 
-								<a href="http://jsfiddle.net/u5c51ubk/3/">jsfiddle</a> | 
-								<a href="http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/">PARALAX</a>
-								</div>
-			<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/logo-icon.png"></div>
+		
+								
+			<div class="nav-icon"><img src="<?php bloginfo('stylesheet_directory') ?>/images/header_logo.png"></div>
 			
-			<nav>
-			<label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
-			<input type="checkbox" id="show-menu" role="button">
-			 
-				
-					<?php
-
-					$defaults = array(
-						'menu_id'         => 'menu',
-						'walker'          => ''
-					);
-					wp_nav_menu( $defaults );
-
-				?>
-				<div class="clear"></div>
-				<ul id="menu">
-					<div class="socialDropdown">
-						<li>
-							[Social Media]
-						</li>
-					</div>
-				</ul>
-				
-			</nav>
-		</div>
+			
+	
 		
 		
 	
-</header>    
- </wrapper>
-  <div class="hidden"></div>  
+</header> -->
+<nav>
+	<label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
+	<input type="checkbox" id="show-menu" role="button">
+		<?php
+			$defaults = array(
+				'menu_id'         => 'menu',
+				'walker'          => ''
+			);
+			wp_nav_menu( $defaults );
+		?>
+		<div class="clear"></div>
+		<ul id="menu">
+			<div class="socialDropdown">
+				<li>
+					[Social Media]
+				</li>
+			</div>
+		</ul>
+
+</nav>    
+
+  <div class="clear"></div>
     
     
 

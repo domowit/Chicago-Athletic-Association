@@ -20,7 +20,7 @@
 /*	MAIN CONTAINER 
 	Set the width to whatever you want the width of your site to be. */
 .container { 
-	max-width: 2000px;
+	max-width: 1180px;
 	margin: 0 auto; 
 }
 
