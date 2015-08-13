@@ -4,7 +4,7 @@
 <main role="main" class="row gutters">
 		<article class="col span_12">
 				
-					
+				ADD	
 						<?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentytwelve' ); ?>
 						<?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'twentytwelve' ); ?>
 						<?php get_search_form(); ?>
