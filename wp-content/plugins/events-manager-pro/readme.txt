@@ -2,8 +2,8 @@
 Contributors: netweblogic
 Tags: events, event, event registration, event calendar, events calendar, event management, paypal, registration, ticket, tickets, ticketing, tickets, theme, widget, locations, maps, booking, attendance, attendee, buddypress, calendar, gigs, payment, payments, sports,
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 2.3.9
+Tested up to: 4.3
+Stable tag: 2.4.2
 
 == Description ==
 
@@ -22,6 +22,43 @@ http://wp-events-plugin.com/support/
 Please visit http://wp-events-plugin.com/documentation/installation/
 
 == Changelog ==
+= 2.4.2 =
+* fixed parse errors on PHP versions lower than 5.3 due to recaptcha 2 library usage of namespacing
+* fixed parse errors on PHP versions lower than 5.3 due to creating lamda functions whilst adding an action or filter 
+
+= 2.4 =
+* added various Multilingual enhancements/fixes, the following can now be translated:
+ * email reminder templates
+ * multiple booking email templates
+ * custom per-event and per-gateway emails
+ * various gateway settings and MB feedback messages
+* fixed minor PHP warnings
+* added EM_CSV_DELIMITER constant, which can be defined in wp-config.php with a value for a CSV delimiter which defaults to a comma
+* fixed MB booking price rounding issues when comparing paid amount to pending total
+* change PHP custom gateway setting updates and sanitation with simplified code,
+* changed gateway setting hard-coded html fields replacing with em field functions (multilingual ready)
+* changed PayPal IPN verification requests to use our on User-Agent identifier
+* changed use of em_gateway_js hook to em_booking_js hook
+* changed option name em_paypal_booking_feedback_thanks to em_paypal_booking_feedback_completed
+* added support for using HTML custom fields in #_BOOKINGFORMCUSTOM placeholder
+* updated authorize.net SSL certificates
+* rewritten Custom Emails feature including a more solid logic with new hooks enabling integration with EM Multilingual mode
+* added Norwegian 
+* updated Czech, German and Italian
+* changed some decimal sizes in DB tables to match those in EM
+* fixed manual bookings overwriting country user field and saving empty data to $EM_Booking->booking_meta['registration'] 
+* fixed widget construct calls for WP 4.3+
+* added recaptcha 2.0 library which can be activated by adding true EM_RECAPTCHA_2 constant in wp-config.php
+* moved inline CSS out into own CSS files
+* renamed some script hook function names to match firing filter/action
+* changed all EM_Pro class functions to static
+* fixed attendees not being removed when modifying booking and reducing number of tickets
+* fixed user field types with array values not showing correctly in personal details section of booking
+* fixed validation errors in multiple option fields where a trailing/leading space is entered in possible values
+* changed MB em_booking_add hook to priority 5 to allow other hooks to intervene earlier
+* fixed checkout redirect when adding a manual booking
+* fixed previously saved custom user checkbox field always remaining checked if 'checked by default' is enabled
+
 = 2.3.9 =
 * fixed offline default gateway email not sent when adding offline payment
 * fixed MB transaction IDs not showing on admin table during ajax navigation

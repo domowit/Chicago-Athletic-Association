@@ -10,3 +10,7 @@ global $EM_Category;
 /* @var $EM_Category EM_Category */
 echo $EM_Category->output_single();
 ?>
+
+
+
+EVENT SINGLE CATEGORY CAA TEMPLATE

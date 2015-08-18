@@ -431,3 +431,13 @@ function events_manager_custom_thumbnails($result, $EM_Event, $placeholder) {
     }
     return $result;
 }
+
+function my_em_custom_formats( $array ){
+
+	$my_formats = array('dbem_event_list_item_format'); //the format you want to override, corresponding to file above.
+
+	return $array + $my_formats; //return the default array and your formats.
+
+}
+
+add_filter('em_formats_filter', 'my_em_custom_formats', 1, 1);

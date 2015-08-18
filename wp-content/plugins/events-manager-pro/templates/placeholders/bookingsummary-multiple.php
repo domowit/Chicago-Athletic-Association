@@ -8,7 +8,7 @@ foreach( $EM_Multiple_Booking->get_bookings() as $EM_Booking ): /* @var $EM_Book
 
 ======================================
 
-<?php echo $EM_Booking->get_event()->output("#_EVENTNAME - #_EVENTDATES - #_EVENTTIMES 
+<?php echo $EM_Booking->output("#_EVENTNAME - #_EVENTDATES - #_EVENTTIMES 
 #_LOCATIONFULLLINE"); ?>
 
 <?php foreach($EM_Booking->get_tickets_bookings() as $EM_Ticket_Booking):

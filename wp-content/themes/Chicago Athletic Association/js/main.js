@@ -300,11 +300,11 @@ jQuery(document).ready(function($){
 			        }
 					break;
 				case 'catch':
-			        if( sectionOffset>= -windowHeight &&  sectionOffset< -0.75*windowHeight ) {
+			        if( sectionOffset>= -windowHeight &&  sectionOffset< -2*windowHeight ) {
 			        	translateY = 100;
 			        	boxShadowBlur = (1 + sectionOffset/windowHeight)*160;
 			        } else {
-			        	translateY = -(10/5.5)*sectionOffset*100/windowHeight;
+			        	translateY = -(10/4.5)*sectionOffset*100/windowHeight;
 			        	
 			        }
 					break;

@@ -10,7 +10,7 @@
 //(see https://github.com/davidhalford/DivPeek)
 //===============================================================================
 //CONFIG: 
-var elementsToTrack = [".scrollfx5 #post1", ".scrollfx5 #post2", ".scrollfx5 #post3" , ".scrollfx5 #post4" , ".scrollfx5 #post5" , ".scrollfx5 #post6" , ".scrollfx5 #post7" , ".scrollfx5 #post8"];
+var elementsToTrack = [".scrollfx5 #post1", ".scrollfx5 #post2", ".scrollfx5 #post3" , ".scrollfx5 #post4" , ".scrollfx5 #post5" , ".scrollfx5 #post6" , ".scrollfx5 #post7" , ".scrollfx5 #post8", ".scrollfx5 #post9", ".scrollfx5 #post10"];
 
 var pixelOffset = -24;
 var inClassName = "inViewPort";

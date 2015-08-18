@@ -1,3 +1,5 @@
+
+
 <?php
 /*
  * Default Categories List Template
@@ -15,3 +17,5 @@ if( get_option('dbem_css_catlist') ) echo "<div class='css-cats-list'>";
 echo EM_Categories::output( $args );
 
 if( get_option('dbem_css_catlist') ) echo "</div>";
+
+
