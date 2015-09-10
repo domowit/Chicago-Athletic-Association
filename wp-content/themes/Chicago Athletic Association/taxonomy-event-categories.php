@@ -23,7 +23,6 @@ $EM_Category = em_get_category($taxonomy->term_id);
 </div>
 
 
-
     
     
 

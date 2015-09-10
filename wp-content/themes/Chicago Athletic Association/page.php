@@ -12,7 +12,7 @@ get_header(); ?>
 		<?php the_title(); ?>
 	</div>
 </div>
-<div class="row span_8 center">
+<div class="row span_6 center">
 	<?php
 						if( have_rows('main_field') ):
 						while ( have_rows('main_field') ) : the_row();
@@ -43,15 +43,47 @@ get_header(); ?>
 
 <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
 <div id="map"></div>
-<div class="row span_9 center">
-	<div class="col guttler span_5"> <a href=" https://www.google.com/maps/place/Chicago+Athletic+Association/@41.8816255,-87.6249418,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x17c961dc3e2ea52a" target="_blank">
-		<h3>
+<div class="row span_6 center">
+	<div class="row center addressPage"> 
+
 			<?php the_field ('address'); ?>
-		</h3>
-		</a> </div>
-	<div class="gutters col span_1">&nbsp</div>
-	<div class="gutters col span_7">
+	
+		</div>
+	
+	<div class="row center">
 		<?php the_field ('contact_form'); ?>
+	</div>
+</div>
+<?php } elseif ( is_page('Library') ) { ?>
+
+<div class="intro">
+	<div class="introTitle">
+		<?php the_title(); ?>
+	</div>
+</div>
+
+<div class="row  center">
+		<div class="row span_6 center"> 
+
+			<?php the_field ('sound_cloud'); ?>
+			<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1947657&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+		<hr/>	
+		</div>
+	
+	<div class="row span_6 center">
+
+			<br/><br/>
+			<h3 align="center">This Months Playlist By Damon Carruesco</h3>
+				<div class="col  span_6"><?php the_field ('spotify_playlist'); ?></div>
+				<div class="col  span_6"> 
+				<img src="http://localhost/wp-content/uploads/2015/08/by_zoranorlic-384x300.jpg">
+				Damon Carruesco of Disappears curated our Monthly playlist for September. Come on by Tuesday night for a DJ set by our curator
+
+				<br/><br/>
+				<strong>ADD PAST PLAYLIST CHART HERE</strong>
+
+				</div>
+			
 	</div>
 </div>
 <?php 
@@ -61,6 +93,7 @@ the_content();
 } 
 ?>
 <?php endwhile; // end of the loop. ?>
+
 <?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
-<?php get_footer(); ?>
+

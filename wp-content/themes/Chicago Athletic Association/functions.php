@@ -419,6 +419,9 @@ function events_manager_custom_thumbnails($result, $EM_Event, $placeholder) {
         case '#_CUSTOMEVENTIMAGEMEDIUM':
             $size = 'single page';
             break;
+        case '#_CUSTOMEVENTIMAGEFEATURED':
+            $size = 'home featured';
+            break;    
         default:
             $size = false;
     }
@@ -441,3 +444,47 @@ function my_em_custom_formats( $array ){
 }
 
 add_filter('em_formats_filter', 'my_em_custom_formats', 1, 1);
+/**
+add_filter('wp_handle_upload_prefilter','tc_handle_upload_prefilter');
+function tc_handle_upload_prefilter($file)
+{
+
+    $img=getimagesize($file['tmp_name']);
+    $minimum = array('width' => '700', 'height' => '600');
+    $width= $img[0];
+    $height =$img[1];
+
+    if ($width < $minimum['width'] )
+        return array("error"=>"Image dimensions are too small. Minimum width is {$minimum['width']}px. Uploaded image width is $width px");
+
+    elseif ($height <  $minimum['height'])
+        return array("error"=>"Image dimensions are too small. Minimum height is {$minimum['height']}px. Uploaded image height is $height px");
+    else
+        return $file; 
+}
+
+*/
+
+
+add_action('em_event_output_condition', 'my_em_styles_event_output_condition', 1, 4);
+function my_em_styles_event_output_condition($replacement, $condition, $match, $EM_Event){
+	if( is_object($EM_Event) && preg_match('/^has_style_(.+)$/',$condition, $matches) && is_array( $EM_Event->styles ) ){
+		if( in_array($matches[1],$EM_Event->styles) ){
+			$replacement = preg_replace("/\{\/?$condition\}/", '', $match);
+		}else{
+			$replacement = '';
+		}
+	}
+	return $replacement;
+}
+
+
+add_filter( 'em_events_build_sql_conditions', 'my_em_scope_conditions',1,2);
+function my_em_scope_conditions($conditions, $args){
+	if( !empty($args['scope']) && $args['scope'] == 'this-week' ){
+		$start_date = date("Y-m-d", strtotime(date("Y").'W'.date('W')."1"));
+		$end_date = date("Y-m-d", strtotime(date("Y").'W'.date('W')."7"));
+		$conditions['scope'] = " (event_start_date BETWEEN CAST('$start_date' AS DATE) AND CAST('$end_date' AS DATE)) OR (event_end_date BETWEEN CAST('$end_date' AS DATE) AND CAST('$start_date' AS DATE))";
+	}
+	return $conditions;
+}

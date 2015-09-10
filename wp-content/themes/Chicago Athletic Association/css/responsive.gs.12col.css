@@ -19,9 +19,10 @@
 
 /*	MAIN CONTAINER 
 	Set the width to whatever you want the width of your site to be. */
-.container { 
+.container, .containerAnimation { 
 	max-width: 1180px;
 	margin: 0 auto; 
+	
 }
 
 
@@ -92,4 +93,60 @@
 	.gutters .span_10 { width: 83.0%; }
 	.gutters .span_11 { width: 91.5%; }
 	.gutters .span_12 { width: 100%; }
+}
+@media ( max-width : 1055px )
+
+ {
+
+ 	article .eventsContainer {
+	border-left: 15px solid #000;
+	border-right: 15px solid #9F2030;
+}
+
+	.span_4 { 
+	width: 374px; 
+	   
+	}
+	.container { 
+	width: 768px;
+	margin: 0 auto; 
+	
+}
+
+ }
+
+
+@media ( max-width : 667px )
+
+ {
+	.span_4 { 
+	width: 50%; 
+	   
+	}
+	.span_4.aside{ 
+	width: 100%; 
+	   
+	}
+	.container { 
+	width: 100%;
+	margin: 0 auto;
+	padding:5px
+}
+
+}
+@media ( max-width : 375px )
+
+ {
+	.span_4 { 
+	width: 100%; 
+	   
+	}
+	.container { 
+	width: 100%;
+	margin: 0 auto; 
+	padding:5px
+
+
+	
+
 }

@@ -40,7 +40,18 @@
 
   				<div class="gutters col span_7 aside aside-1" style="margin-top:15px;">
 				<h2><?php echo $event->output('#_EVENTNAME'); ?></h2>
-				<?php echo $event->output('#_ATT{event_description}'); ?> 
+				<?php echo $event->output('#_ATT{event_description}'); ?>
+
+
+<?php $the_query = new WP_Query( $args ); ?>
+<?php while ( have_posts() ) : the_post(); ?>
+<?php the_content(); ?> HI
+<?php endwhile; ?>	
+<?php wp_reset_postdata(); ?>
+			
+
+
+				
 			</div>
 
 			
@@ -51,14 +62,23 @@
 
   <div class="gutters col span_4 aside aside-2" >
 				<hr/>
-				<h4 align="center"> <?php echo $event->output('#_EVENTDATES'); ?><br/>
-					<?php echo $event->output('#_EVENTTIMES') ?> </h4>
+					<h4 align="center"> <?php echo $event->output('#F #j'); ?><br/> 
+					<?php echo $event->output('#_12HSTARTTIME') ?> - <?php echo $event->output('#_12HENDTIME') ?></h4>
 				<hr/>
 				<h4 align="center" class="location"><a href="<?php echo $event->output('#_LOCATIONURL'); ?>"> - <?php echo $event->output('#_LOCATIONNAME'); ?> - </a></h4>
 				<hr/>
-				<div class="ticketingForm">
-				<?php echo $event->output('#_BOOKINGFORM'); ?> 
-				</div>
+				
+
+
+				<?php echo $event->output('<div class="ticketingForm">' . '#_BOOKINGFORM' . '</div>'); ?>
+
+			
+			
+
+				
+				
+				
+			
 			</div>
 			<div class="clear"></div>
 			
@@ -83,10 +103,13 @@
 		<div class="clear"></div>
 </div><!--END CONTAINER -->	
 	<div class="row span_12" style="padding-top:50px; margin: 0 auto;">
-		<hr/>
-		<div class="container">
+	
 
+<div class="intro">
 <h2 align="center">Other Upcoming Events </h2>
+</div>
+
+		<div class="container">
 <?php
 global $post;
 $EM_Event = em_get_event($post->ID, 'post_id');
@@ -105,10 +128,10 @@ foreach ( $events as $event )
 			<a href="<?php echo $event->output('#_LOCATIONURL'); ?>"> - <?php echo $event->output('#_LOCATIONNAME'); ?> - </a>
 		</h4>
 		<h3 align="center">  <?php echo $event->output('#_EVENTLINK'); ?></h3> 
-		<p align="center"> <?php echo $event->output('#_EVENTDATES'); ?><br/> 
+		<p align="center"> <?php echo $event->output('#F #j'); ?><br/> 
 		<?php echo $event->output('#_EVENTTIMES') ?> </p>
 			
-		<a href="<?php echo $event->output('#_EVENTURL'); ?>" style="margin: 0 auto;"><div class="rsvp">FREE-RSVP</div></a>
+		<a href="<?php echo $event->output('#_EVENTURL'); ?>" style="margin: 0 auto;"><div class="rsvp">MORE</div></a>
 	</div>
 </div>
 </article>

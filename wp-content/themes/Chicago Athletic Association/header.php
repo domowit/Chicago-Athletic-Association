@@ -86,27 +86,50 @@ $(window).bind("scroll", function() {
 
 
 
+<div class="header">
+	<div class="socialLinks">
+		<div class="text">
+		<a href="https://www.facebook.com/ChicagoAthleticAssociation?fref=ts">
+		<span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+		</a>
+		<!--<span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>-->
+		<a href="https://instagram.com/p/23xzTEocyq/">
+		<span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
+		  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+		</span>
+		</a>
+		12 S MICHIGAN AVENUE  |  CHICAGO, IL 60603
+		</div>
+	</div>
+
+
+	<div class="headerLogo">
+		<a href="/"><div class="logoHeader">&nbsp;</div></a>
+	</div>
+
+
+	<nav>
+			<?php
+				$defaults = array(
+					'menu_id'         => 'menu',
+					'walker'          => ''
+				);
+				wp_nav_menu( $defaults );
+			?>
+
+	</nav> 
+	<div class="clear"></div>
+</div> <!--end .header -->
 
 
 
-
-
-<nav>
-	<!--<label for="show-menu" class="show-menu"><i class="fa fa-bars"></i></label>
-	<input type="checkbox" id="show-menu" role="button">-->
-		<?php
-			$defaults = array(
-				'menu_id'         => 'menu',
-				'walker'          => ''
-			);
-			wp_nav_menu( $defaults );
-		?>
-		
-		
-
-</nav>    
-
-<div class="clear"></div>
     
 
 	

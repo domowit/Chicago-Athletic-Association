@@ -12,12 +12,35 @@ Primary style
     z-index: 10;
     width:100%;
 }
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 1024px) {
   body::before {
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
     display: none;
+
   }
+   article .eventsContainer {
+    border-left: 15px solid #9F2030;
+    border-right: 15px solid #9F2030;
+}
+.cd-section {
+  height: 120vh;
+   z-index:0;
+  
+
+
+
+
+}
+
+}
+@media only screen and (max-width: 1023px) {
+  article .eventsContainer {
+    border-left: none;
+    border-right: none;
+}
+
 }
 
 .logoAnimation {
@@ -27,7 +50,7 @@ Primary style
     padding:2% 0;
 
 }
-.logoAnimation .container { 
+.logoAnimation .containerAnimation { 
 	position:relative;
     left:50%;}
 
@@ -56,10 +79,10 @@ float:left;
 
 .scrollfx5 {
 	
-	padding-top:1%;
+	
 
 	margin: 20px auto 40px auto;
-	padding-top:1%;
+	
 	
 
 	
@@ -165,15 +188,7 @@ Main Components
 .cd-section:nth-child(1) {
 	 <!-- margin-top:-200px; -->
 }
-.cd-section {
-  height: 120vh;
-   z-index:0;
-  
 
-
-
-
-}
 
 .cd-section:first-of-type > div,
 .cd-section:nth-of-type(2) > div,
@@ -225,7 +240,7 @@ background-color: #eee9db ;
     display: none;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .cd-section > div {
     position: fixed;
     top: 0;

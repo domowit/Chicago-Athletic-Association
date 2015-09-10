@@ -27,16 +27,15 @@ EM_Events::output( array('category' => $EM_Category->slug) )
 <div class="eventsThumb">
 <a href="<?php echo $event->output('#_EVENTURL'); ?>"> <?php echo $event->output('#_CUSTOMEVENTIMAGETHUMB'); ?> </a> 
 </div>  
-
 	<div class="eventContent">  
 		<h4 align="center" class="location"> 
 			<a href="<?php echo $event->output('#_LOCATIONURL'); ?>"> - <?php echo $event->output('#_LOCATIONNAME'); ?> - </a>
 		</h4>
 		<h3 align="center">  <?php echo $event->output('#_EVENTLINK'); ?></h3> 
-		<p align="center"> <?php echo $event->output('#_EVENTDATES'); ?><br/> 
+		<p align="center"> <?php echo $event->output('#F #j'); ?><br/>  
 		<?php echo $event->output('#_EVENTTIMES') ?> </p>
 			
-		<a href="<?php echo $event->output('#_EVENTURL'); ?>" style="margin: 0 auto;"><div class="rsvp">FREE-RSVP</div></a>
+		<a href="<?php echo $event->output('#_EVENTURL'); ?>" style="margin: 0 auto;"><div class="rsvp">MORE</div></a>
 	</div>
 </div>
 </article>

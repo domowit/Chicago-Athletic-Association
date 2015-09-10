@@ -37,7 +37,7 @@
                    
 
   });
-              var image = 'http://localhost/wp-content/themes/Chicago%20Athletic%20Association/images/google-maps-grey-marker-w-shadow-md.png';
+              var image = 'http://caa.domowit.com/wp-content/themes/Chicago%20Athletic%20Association/images/google-maps-grey-marker-w-shadow-md.png';
   var beachMarker = new google.maps.Marker({
      position: new google.maps.LatLng(41.8816255,-87.6243),
     map: map,
