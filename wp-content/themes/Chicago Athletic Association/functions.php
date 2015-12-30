@@ -444,7 +444,7 @@ function my_em_custom_formats( $array ){
 }
 
 add_filter('em_formats_filter', 'my_em_custom_formats', 1, 1);
-/**
+
 add_filter('wp_handle_upload_prefilter','tc_handle_upload_prefilter');
 function tc_handle_upload_prefilter($file)
 {
@@ -463,7 +463,7 @@ function tc_handle_upload_prefilter($file)
         return $file; 
 }
 
-*/
+
 
 
 add_action('em_event_output_condition', 'my_em_styles_event_output_condition', 1, 4);
